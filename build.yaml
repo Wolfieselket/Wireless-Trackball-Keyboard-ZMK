@@ -1,9 +1,9 @@
 
 include:
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: wireless_trackball_left
     artifact-name: wireless_trackball_left
 
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: wireless_trackball_right
     artifact-name: wireless_trackball_right
