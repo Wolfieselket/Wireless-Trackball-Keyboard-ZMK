@@ -1,0 +1,17 @@
+
+if SHIELD_WIRELESS_TRACKBALL_LEFT || SHIELD_WIRELESS_TRACKBALL_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Wireless Trackball"
+
+config ZMK_SPLIT
+    default y
+
+endif
+
+if SHIELD_WIRELESS_TRACKBALL_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
