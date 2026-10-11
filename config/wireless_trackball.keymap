@@ -1,0 +1,46 @@
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "QWERTY";
+
+            bindings = <
+                // Left half: 6 + 6 + 6 + 4 keys
+                &kp TAB  &kp Q &kp W &kp E &kp R &kp T
+                &kp LSHFT &kp A &kp S &kp D &kp F &kp G
+                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B
+                &kp LALT &kp LGUI &kp SPACE &mo 1
+
+                // Right half: 6 + 6 + 6 + 4 keys
+                &kp Y &kp U &kp I &kp O &kp P &kp BSPC
+                &kp H &kp J &kp K &kp L &kp SEMI &kp RET
+                &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                &mo 1 &kp SPACE &kp RALT &kp DEL
+            >;
+        };
+
+        function_layer {
+            display-name = "FUNCTION";
+
+            bindings = <
+                // Left half
+                &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
+                &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5
+                &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans
+
+                // Right half
+                &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
+                &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
+                &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans
+            >;
+        };
+    };
+};
